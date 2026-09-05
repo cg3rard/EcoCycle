@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoCycle | Order Details</title>
+    <!-- CSS - Modular Approach -->
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/utilities.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div id="navbar-root"></div>
+
+    <link rel="icon" type="image/png" href="/ecocycle.png" />
+    <main class="container section">
+      <!-- Back Button -->
+      <a href="javascript:history.back()" class="back-button">
+        <span>←</span> Back to Dashboard
+      </a>
+
+      <!-- Order Header -->
+      <div class="order-header">
+        <div class="order-info">
+          <h2>Order #ECO-5234</h2>
+          <p style="margin: 0 0 0.5rem; color: var(--text-muted)">
+            Order placed on March 18, 2024
+          </p>
+          <div class="order-meta">
+            <div class="order-meta-item">
+              <span class="order-meta-label">Order ID:</span>
+              <span class="order-meta-value">ECO-5234</span>
+            </div>
+            <div class="order-meta-item">
+              <span class="order-meta-label">Order Date:</span>
+              <span class="order-meta-value">March 18, 2024</span>
+            </div>
+            <div class="order-meta-item">
+              <span class="order-meta-label">Estimated Delivery:</span>
+              <span class="order-meta-value">March 25, 2024</span>
+            </div>
+            <div class="order-meta-item">
+              <span class="order-meta-label">Shipping Address:</span>
+              <span class="order-meta-value"
+                >123 Green Street, Eco City, EC 12345</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="order-product-summary">
+          <h3 style="margin-top: 0; margin-bottom: 1.5rem">Order Summary</h3>
+          <div class="order-product-item">
+            <div class="order-product-image">
+              <img
+                src="/picture/product_detail/prod_detail_1.jpg"
+                alt="Recycled Tote Bag"
+                style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  border-radius: inherit;
+                "
+              />
+            </div>
+            <div class="order-product-details">
+              <h4>Recycled Tote Bag</h4>
+              <p>
+                Premium durable tote bag crafted from post-consumer textile
+                waste.
+              </p>
+              <p>Quantity: 1</p>
+              <p class="order-product-price">$24.99</p>
+            </div>
+          </div>
+          <div
+            style="
+              margin-top: 1.5rem;
+              padding-top: 1.5rem;
+              border-top: 1px solid var(--border);
+            "
+          >
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 0.5rem;
+              "
+            >
+              <span>Subtotal:</span>
+              <span>$24.99</span>
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 0.5rem;
+              "
+            >
+              <span>Shipping:</span>
+              <span style="color: var(--forest-green); font-weight: 600"
+                >FREE</span
+              >
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 0.5rem;
+              "
+            >
+              <span>Tax:</span>
+              <span>$0.00</span>
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                font-weight: 700;
+                font-size: 1.15rem;
+                color: var(--forest-green);
+                padding-top: 1rem;
+                border-top: 1px solid var(--border);
+              "
+            >
+              <span>Total:</span>
+              <span>$24.99</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Order Tracking Progress Bar -->
+      <div class="order-tracking-container">
+        <h3>Order Tracking Progress</h3>
+        <div class="progress-timeline">
+          <div class="progress-step completed">
+            <div class="progress-step-circle completed">✓</div>
+            <div class="progress-step-label">Order Placed</div>
+            <div class="progress-step-date">Mar 18, 2024</div>
+          </div>
+
+          <div class="progress-step completed">
+            <div class="progress-step-circle completed">✓</div>
+            <div class="progress-step-label">Processing</div>
+            <div class="progress-step-date">Mar 19, 2024</div>
+          </div>
+
+          <div class="progress-step active">
+            <div class="progress-step-circle active">📦</div>
+            <div class="progress-step-label">Shipped</div>
+            <div class="progress-step-date">In Progress</div>
+          </div>
+
+          <div class="progress-step">
+            <div class="progress-step-circle">✓</div>
+            <div class="progress-step-label">Delivered</div>
+            <div class="progress-step-date">Est. Mar 25, 2024</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Order Status Card -->
+      <div class="card" style="margin-bottom: 2rem">
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+          "
+        >
+          <h3 style="margin: 0">Current Status</h3>
+          <span class="order-status-badge shipped">🚚 In Transit</span>
+        </div>
+        <p style="margin: 0 0 1rem; color: var(--text-secondary)">
+          Your order is currently on its way to you! Your package is expected to
+          arrive by <strong>March 25, 2024</strong>.
+        </p>
+        <p style="margin: 0; color: var(--text-muted); font-size: 0.95rem">
+          📦 Tracking Number: <strong>ECO-5234-TRACK123456</strong>
+        </p>
+      </div>
+
+      <!-- Additional Order Details -->
+      <div class="grid cols-2">
+        <div class="card">
+          <h3 style="margin-top: 0; color: var(--forest-green)">
+            Environmental Impact
+          </h3>
+          <div style="display: flex; flex-direction: column; gap: 0.8rem">
+            <div style="display: flex; justify-content: space-between">
+              <span>Plastic Waste Prevented:</span>
+              <span style="font-weight: 600">2.5 kg</span>
+            </div>
+            <div style="display: flex; justify-content: space-between">
+              <span>Carbon Footprint Saved:</span>
+              <span style="font-weight: 600">1.2 kg CO₂</span>
+            </div>
+            <div style="display: flex; justify-content: space-between">
+              <span>Eco-Points Earned:</span>
+              <span style="font-weight: 600; color: var(--forest-green)"
+                >+50 Points</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-top: 0">Order Timeline</h3>
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              gap: 0.8rem;
+              font-size: 0.95rem;
+            "
+          >
+            <div>
+              <strong style="color: var(--forest-green)"
+                >Order Confirmed</strong
+              >
+              <p style="margin: 0.2rem 0 0; color: var(--text-muted)">
+                March 18, 2024 at 2:45 PM
+              </p>
+            </div>
+            <div>
+              <strong style="color: var(--forest-green)"
+                >Processing Started</strong
+              >
+              <p style="margin: 0.2rem 0 0; color: var(--text-muted)">
+                March 19, 2024 at 9:30 AM
+              </p>
+            </div>
+            <div>
+              <strong style="color: var(--forest-green)">Shipped</strong>
+              <p style="margin: 0.2rem 0 0; color: var(--text-muted)">
+                March 20, 2024 at 11:15 AM
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div
+        style="
+          display: flex;
+          gap: 1rem;
+          margin-top: 2rem;
+          justify-content: center;
+        "
+      >
+        <a href="/buyer-dashboard" class="btn btn-outline">Back to Dashboard</a>
+        <a href="/products" class="btn btn-secondary">Continue Shopping</a>
+      </div>
+    </main>
+
+    <div id="footer-root"></div>
+
+    <!-- ========== SCRIPTS - Modular Approach ========== -->
+    <!-- Auth Manager must load first -->
+    <script src="/js/auth.js"></script>
+
+    <!-- Component scripts -->
+    <script src="/js/components/navbar.js"></script>
+    <script src="/js/components/footer.js"></script>
+
+    <!-- Main app entry point -->
+    <script src="/js/main.js"></script>
+  </body>
+</html>

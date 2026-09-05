@@ -1,0 +1,48 @@
+<header class="site-header">
+  <div class="container nav-wrapper">
+    <a class="brand" href="/">
+      <span class="brand-logo">
+        <img src="/ecocycle.png" alt="EcoCycle logo" />
+      </span>
+      <span>EcoCycle</span>
+    </a>
+
+    <button
+      class="mobile-menu-btn"
+      id="mobileMenuBtn"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+      aria-controls="mainNav"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-links" id="mainNav" aria-label="Main navigation">
+      <a href="/" data-nav="home">Home</a>
+      <a href="/products" data-nav="products">Products</a>
+      <a href="/about" data-nav="about">About Us</a>
+      <a href="/" id="dashboardLink" data-nav="dashboard" style="display: none"
+        >Dashboard</a
+      >
+      <a href="/login" class="btn btn-sm" id="loginBtn" data-nav="login"
+        >Login</a
+      >
+      <a
+        href="/register"
+        class="btn btn-primary btn-sm"
+        id="signupBtn"
+        data-nav="register"
+        >Sign Up</a
+      >
+      <a
+        href="/logout"
+        class="btn btn-sm btn-signout"
+        id="signoutBtn"
+        style="display: none"
+        >Sign Out</a
+      >
+    </nav>
+  </div>
+</header>

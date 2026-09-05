@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoCycle | Sign In</title>
+    <!-- CSS - Modular Approach -->
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/utilities.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div id="navbar-root"></div>
+
+    <link rel="icon" type="image/png" href="/ecocycle.png" />
+    <main class="container section">
+      <h1 class="section-title" style="text-align: center">Welcome Back</h1>
+      <p class="section-subtitle" style="text-align: center">
+        Sign in to your EcoCycle account and continue your sustainable journey
+      </p>
+
+      <section class="form-wrapper" aria-labelledby="loginHeading">
+        <h2 id="loginHeading">Sign In</h2>
+
+        <div
+        <div class="card bg-green-light rounded-lg p-3 mb-3">
+          <strong>Demo Credentials:</strong>
+          <div style="margin-top: 0.5rem">
+            Buyer:
+            <code
+              style="
+                background: rgba(0, 0, 0, 0.05);
+                padding: 0.2rem 0.4rem;
+                border-radius: 4px;
+              "
+              >buyer</code
+            >
+            /
+            <code
+              style="
+                background: rgba(0, 0, 0, 0.05);
+                padding: 0.2rem 0.4rem;
+                border-radius: 4px;
+              "
+              >buyer</code
+            >
+          </div>
+          <div>
+            Seller:
+            <code
+              style="
+                background: rgba(0, 0, 0, 0.05);
+                padding: 0.2rem 0.4rem;
+                border-radius: 4px;
+              "
+              >seller</code
+            >
+            /
+            <code
+              style="
+                background: rgba(0, 0, 0, 0.05);
+                padding: 0.2rem 0.4rem;
+                border-radius: 4px;
+              "
+              >seller</code
+            >
+          </div>
+        </div>
+
+        <form action="/login" method="POST" novalidate>
+          <div class="form-field">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Enter your username"
+              required
+              autocomplete="username"
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              required
+              autocomplete="current-password"
+            />
+          </div>
+
+          <button
+            class="btn btn-primary"
+            type="submit"
+            style="width: 100%; min-height: 48px"
+          >
+            Sign In
+          </button>
+        </form>
+
+        <p id="loginError" class="alert" role="alert" hidden></p>
+        <p
+          style="
+            text-align: center;
+            margin-top: 1.5rem;
+            color: var(--text-muted);
+          "
+        >
+          Don't have an account?
+          <a
+            href="/register"
+            style="color: var(--forest-green); font-weight: 600"
+            >Create one</a
+          >
+        </p>
+      </section>
+    </main>
+
+    <div id="footer-root"></div>
+
+  <!-- ========== SCRIPTS - Modular Approach ========== -->
+  <!-- Auth Manager must load first -->
+  <script src="/js/auth.js"></script>
+
+  <!-- Component scripts -->
+    <script src="/js/components/navbar.js"></script>
+    <script src="/js/components/footer.js"></script>
+
+    <!-- Main app entry point -->
+    <script src="/js/main.js"></script>
+  </body>
+</html>

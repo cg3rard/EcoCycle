@@ -1,0 +1,22 @@
+{
+  "name": "ecocycle-marketplace",
+  "version": "1.0.0",
+  "description": "EcoCycle marketplace project for HCI assignment",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "ecocycle",
+    "marketplace",
+    "hci",
+    "express"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.22.1",
+    "express-session": "^1.19.0"
+  }
+}

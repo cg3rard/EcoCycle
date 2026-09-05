@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoCycle | Seller Dashboard</title>
+    <!-- CSS - Modular Approach -->
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/utilities.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div id="navbar-root"></div>
+
+    <link rel="icon" type="image/png" href="/ecocycle.png" />
+    <main class="container section">
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 2rem;
+        "
+      >
+        <div>
+          <h1 class="section-title" style="margin-bottom: 0.5rem">
+            Welcome back, GreenThumb!
+          </h1>
+
+          <p class="section-subtitle" style="margin: 0">
+            Manage your sustainable products and track your store performance
+          </p>
+        </div>
+      </div>
+
+      <!-- KPI Cards -->
+      <section class="grid cols-3" style="margin-bottom: 3rem">
+        <div class="card">
+          <h3 style="color: var(--forest-green)">Monthly Revenue</h3>
+          <div
+            style="
+              font-size: 2.5rem;
+              font-weight: 700;
+              color: var(--forest-green);
+              margin: 0.5rem 0;
+            "
+          >
+            $4,980
+          </div>
+          <p style="margin: 0; color: var(--text-muted)">
+            ↑ 18% from last month
+          </p>
+        </div>
+        <div class="card">
+          <h3 style="color: var(--forest-green)">Active Products</h3>
+          <div
+            style="
+              font-size: 2.5rem;
+              font-weight: 700;
+              color: var(--forest-green);
+              margin: 0.5rem 0;
+            "
+          >
+            24
+          </div>
+          <p style="margin: 0; color: var(--text-muted)">
+            Live listings on marketplace
+          </p>
+        </div>
+        <div class="card">
+          <h3 style="color: var(--forest-green)">Pending Orders</h3>
+          <div
+            style="
+              font-size: 2.5rem;
+              font-weight: 700;
+              color: var(--forest-green);
+              margin: 0.5rem 0;
+            "
+          >
+            8
+          </div>
+          <p style="margin: 0; color: var(--text-muted)">Awaiting shipping</p>
+        </div>
+      </section>
+
+      <!-- Main Actions -->
+      <section class="grid cols-2" style="margin-bottom: 3rem">
+        <div
+          class="card"
+          style="
+            border: 2px solid var(--mint-green);
+            background: linear-gradient(
+              135deg,
+              rgba(200, 242, 213, 0.1),
+              transparent
+            );
+          "
+        >
+          <h2 style="color: var(--forest-green); margin-top: 0">
+            + Add New Product
+          </h2>
+          <p style="color: var(--text-secondary)">
+            List your eco-friendly and recycled products to reach conscious
+            buyers
+          </p>
+          <form
+            onsubmit="
+              event.preventDefault();
+              alert('Product listing form would open here!');
+            "
+          >
+            <div class="form-field" style="margin-bottom: 1.5rem">
+              <input type="text" placeholder="Product name" />
+            </div>
+            <button class="btn btn-primary" type="submit" style="width: 100%">
+              Create Listing
+            </button>
+          </form>
+        </div>
+
+        <div class="card">
+          <h2 style="margin-bottom: 1rem">Shipping Status</h2>
+          <div style="display: grid; gap: 1rem">
+            <div
+              style="
+                padding: 1rem;
+                background: var(--surface-light);
+                border-radius: var(--radius);
+                border-left: 4px solid var(--forest-green);
+              "
+            >
+              <p style="margin: 0; font-size: 0.9rem; color: var(--text-muted)">
+                Preparing for shipment
+              </p>
+              <p
+                style="
+                  margin: 0.5rem 0 0;
+                  font-size: 1.5rem;
+                  font-weight: 700;
+                  color: var(--forest-green);
+                "
+              >
+                8
+              </p>
+            </div>
+            <div
+              style="
+                padding: 1rem;
+                background: var(--surface-light);
+                border-radius: var(--radius);
+                border-left: 4px solid #4caf50;
+              "
+            >
+              <p style="margin: 0; font-size: 0.9rem; color: var(--text-muted)">
+                In transit
+              </p>
+              <p
+                style="
+                  margin: 0.5rem 0 0;
+                  font-size: 1.5rem;
+                  font-weight: 700;
+                  color: #4caf50;
+                "
+              >
+                14
+              </p>
+            </div>
+            <div
+              style="
+                padding: 1rem;
+                background: var(--surface-light);
+                border-radius: var(--radius);
+                border-left: 4px solid #2196f3;
+              "
+            >
+              <p style="margin: 0; font-size: 0.9rem; color: var(--text-muted)">
+                Delivered (today)
+              </p>
+              <p
+                style="
+                  margin: 0.5rem 0 0;
+                  font-size: 1.5rem;
+                  font-weight: 700;
+                  color: #2196f3;
+                "
+              >
+                4
+              </p>
+            </div>
+          </div>
+        </div> 
+      </section>
+
+      <!-- Trust & Verification -->
+      <section style="margin-bottom: 3rem">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+          <h2 class="section-title" style="margin: 0;">Store Trust & Verification</h2>
+        </div>
+        <div class="grid cols-2">
+          <div class="card">
+            <h3 style="margin-top: 0; display: flex; align-items: center; gap: 0.5rem; color: var(--forest-green);">
+              ✓ Eco-Certified Seller
+            </h3>
+            <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+              Your store has maintained a 98% sustainability score. Your product materials and supply chain have been verified.
+            </p>
+            <div style="width: 100%; background: var(--surface-light); height: 8px; border-radius: 4px; overflow: hidden;">
+              <div style="width: 98%; background: var(--forest-green); height: 100%;"></div>
+            </div>
+            <p style="text-align: right; margin: 0.5rem 0 0; font-size: 0.85rem; font-weight: 600; color: var(--forest-green);">98 / 100</p>
+          </div>
+          <div class="card">
+            <h3 style="margin-top: 0; color: var(--text-primary);">Customer Trust Metrics</h3>
+            <div style="display: flex; flex-direction: column; gap: 0.8rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">
+                <span style="color: var(--text-secondary);">Average Rating</span>
+                <span style="font-weight: 600;">4.9 / 5.0 ⭐</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">
+                <span style="color: var(--text-secondary);">On-Time Shipping</span>
+                <span style="font-weight: 600; color: var(--forest-green);">100%</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="color: var(--text-secondary);">Return Rate</span>
+                <span style="font-weight: 600;">1.2% (Low)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recent Orders -->
+      <section>
+        <h2 class="section-title">Recent Orders</h2>
+        <div class="grid cols-2">
+          <div class="card">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: start;
+                margin-bottom: 1rem;
+              "
+            >
+              <div>
+                <h3 style="margin: 0; margin-bottom: 0.5rem">
+                  Order #ECO-5234
+                </h3>
+                <p
+                  style="margin: 0; color: var(--text-muted); font-size: 0.9rem"
+                >
+                  3x Recycled Tote Bag
+                </p>
+              </div>
+              <span
+                style="
+                  background: #e8f5ed;
+                  padding: 0.4rem 0.8rem;
+                  border-radius: 999px;
+                  font-size: 0.85rem;
+                  color: var(--forest-green);
+                  font-weight: 600;
+                "
+                >Shipped</span
+              >
+            </div>
+            <div
+              style="
+                padding: 1rem;
+                background: var(--surface-light);
+                border-radius: var(--radius);
+              "
+            >
+              <p style="margin: 0; font-size: 0.9rem">
+                <strong>$74.97</strong> · Revenue: $32.14
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: start;
+                margin-bottom: 1rem;
+              "
+            >
+              <div>
+                <h3 style="margin: 0; margin-bottom: 0.5rem">
+                  Order #ECO-5098
+                </h3>
+                <p
+                  style="margin: 0; color: var(--text-muted); font-size: 0.9rem"
+                >
+                  1x Recycled Tote Bag, 1x Bamboo Cutlery
+                </p>
+              </div>
+              <span
+                style="
+                  background: #e8f5ed;
+                  padding: 0.4rem 0.8rem;
+                  border-radius: 999px;
+                  font-size: 0.85rem;
+                  color: var(--forest-green);
+                  font-weight: 600;
+                "
+                >Delivered</span
+              >
+            </div>
+            <div
+              style="
+                padding: 1rem;
+                background: var(--surface-light);
+                border-radius: var(--radius);
+              "
+            >
+              <p style="margin: 0; font-size: 0.9rem">
+                <strong>$37.48</strong> · Revenue: $18.74
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-root"></div>
+
+    <!-- ========== SCRIPTS - Modular Approach ========== -->
+    <!-- Auth Manager must load first -->
+    <script src="/js/auth.js"></script>
+
+    <!-- Component scripts -->
+    <script src="/js/components/navbar.js"></script>
+    <script src="/js/components/footer.js"></script>
+
+    <!-- Main app entry point -->
+    <script src="/js/main.js"></script>
+  </body>
+</html>

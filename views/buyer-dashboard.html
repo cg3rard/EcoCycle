@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoCycle | My Dashboard</title>
+    <!-- CSS - Modular Approach -->
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/utilities.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+
+  <body>
+    <div id="navbar-root"></div>
+    <link rel="icon" type="image/png" href="/ecocycle.png" />
+
+    <main class="container section">
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 2rem;
+        "
+      >
+        <div>
+          <h1 class="section-title" style="margin-bottom: 0.5rem">
+            Welcome Back, Eco-Shopper!
+          </h1>
+          <p class="section-subtitle" style="margin: 0">
+            Track your purchases, eco-points, and environmental impact
+          </p>
+        </div>
+      </div>
+
+      <!-- KPI Cards -->
+      <section class="grid cols-3" style="margin-bottom: 3rem">
+        <div class="card">
+          <h3 style="color: var(--forest-green)">Your Eco-Points</h3>
+          <div
+            style="
+              font-size: 2.5rem;
+              font-weight: 700;
+              color: var(--forest-green);
+              margin: 0.5rem 0;
+            "
+          >
+            1,280
+          </div>
+          <p style="margin: 0; color: var(--text-muted)">
+            Earn more with each sustainable purchase
+          </p>
+        </div>
+        <div class="card">
+          <h3 style="color: var(--forest-green)">Waste Prevented</h3>
+          <div
+            style="
+              font-size: 2.5rem;
+              font-weight: 700;
+              color: var(--forest-green);
+              margin: 0.5rem 0;
+            "
+          >
+            24.8 kg
+          </div>
+          <p style="margin: 0; color: var(--text-muted)">
+            Total plastic waste diverted from landfills
+          </p>
+        </div>
+        <div class="card">
+          <h3 style="color: var(--forest-green)">Orders Completed</h3>
+          <div
+            style="
+              font-size: 2.5rem;
+              font-weight: 700;
+              color: var(--forest-green);
+              margin: 0.5rem 0;
+            "
+          >
+            12
+          </div>
+          <p style="margin: 0; color: var(--text-muted)">
+            Total eco-friendly purchases
+          </p>
+        </div>
+      </section>
+
+      <!-- Impact Transparency -->
+      <section style="margin-bottom: 3rem">
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+          "
+        >
+          <h2 class="section-title" style="margin: 0">
+            Verified Impact Tracker
+          </h2>
+          <span
+            style="
+              background: #e8f5ed;
+              color: var(--forest-green);
+              padding: 0.4rem 0.8rem;
+              border-radius: 999px;
+              font-size: 0.85rem;
+              font-weight: 600;
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+            "
+          >
+            ✓ Transparent & Verified
+          </span>
+        </div>
+        <div class="card" style="padding: 2rem">
+          <p
+            style="
+              margin-top: 0;
+              color: var(--text-secondary);
+              margin-bottom: 2rem;
+            "
+          >
+            To ensure complete transparency, every sustainable action you take
+            is tracked and verified. Here is the detailed breakdown of your
+            environmental impact over time.
+          </p>
+          <div class="grid cols-3" style="gap: 1.5rem; text-align: center">
+            <div
+              style="
+                padding: 1.5rem;
+                background: var(--surface-light);
+                border-radius: var(--radius);
+                border-top: 3px solid var(--forest-green);
+              "
+            >
+              <h4 style="margin: 0 0 0.5rem; color: var(--text-muted)">
+                Water Saved
+              </h4>
+              <div
+                style="
+                  font-size: 2rem;
+                  font-weight: 700;
+                  color: var(--forest-green);
+                "
+              >
+                1,250 L
+              </div>
+            </div>
+            <div
+              style="
+                padding: 1.5rem;
+                background: var(--surface-light);
+                border-radius: var(--radius);
+                border-top: 3px solid var(--mint-green);
+              "
+            >
+              <h4 style="margin: 0 0 0.5rem; color: var(--text-muted)">
+                CO₂ Emissions Reduced
+              </h4>
+              <div
+                style="
+                  font-size: 2rem;
+                  font-weight: 700;
+                  color: var(--forest-green);
+                "
+              >
+                45 kg
+              </div>
+            </div>
+            <div
+              style="
+                padding: 1.5rem;
+                background: var(--surface-light);
+                border-radius: var(--radius);
+                border-top: 3px solid var(--earth-brown);
+              "
+            >
+              <h4 style="margin: 0 0 0.5rem; color: var(--text-muted)">
+                Trees Planted
+              </h4>
+              <div
+                style="
+                  font-size: 2rem;
+                  font-weight: 700;
+                  color: var(--forest-green);
+                "
+              >
+                3
+              </div>
+            </div>
+          </div>
+          <div
+            style="
+              margin-top: 2rem;
+              padding-top: 1.5rem;
+              border-top: 1px solid var(--border);
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              flex-wrap: wrap;
+              gap: 1rem;
+            "
+          >
+            <span style="font-size: 0.9rem; color: var(--text-muted)"
+              >Last updated on March 20, 2024</span
+            >
+            <a
+              href="#"
+              style="
+                color: var(--forest-green);
+                font-weight: 600;
+                text-decoration: underline;
+              "
+              >View Public Transparency Ledger</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Recent Orders -->
+      <section style="margin-bottom: 3rem">
+        <h2 class="section-title">Recent Orders</h2>
+        <div class="grid cols-2">
+          <div class="card">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: start;
+                margin-bottom: 1rem;
+              "
+            >
+              <div>
+                <h3 style="margin: 0; margin-bottom: 0.5rem">
+                  Recycled Tote Bag
+                </h3>
+                <p
+                  style="margin: 0; color: var(--text-muted); font-size: 0.9rem"
+                >
+                  Order #ECO-5234 · March 18, 2024
+                </p>
+              </div>
+              <span
+                style="
+                  background: #e8f5ed;
+                  padding: 0.4rem 0.8rem;
+                  border-radius: 999px;
+                  font-size: 0.85rem;
+                  color: var(--forest-green);
+                  font-weight: 600;
+                "
+                >Delivered</span
+              >
+            </div>
+            <div
+              style="
+                padding: 1rem;
+                background: var(--surface-light);
+                border-radius: var(--radius);
+                margin-bottom: 1rem;
+              "
+            >
+              <p style="margin: 0; font-size: 0.9rem">
+                <strong>$24.99</strong> · +50 Eco-Points earned
+              </p>
+            </div>
+            <a class="btn btn-secondary" href="/order-detail">View Detail</a>
+          </div>
+
+          <div class="card">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: start;
+                margin-bottom: 1rem;
+              "
+            >
+              <div>
+                <h3 style="margin: 0; margin-bottom: 0.5rem">
+                  Bamboo Toothbrush Pack
+                </h3>
+                <p
+                  style="margin: 0; color: var(--text-muted); font-size: 0.9rem"
+                >
+                  Order #ECO-5098 · February 12, 2024
+                </p>
+              </div>
+              <span
+                style="
+                  background: #e8f5ed;
+                  padding: 0.4rem 0.8rem;
+                  border-radius: 999px;
+                  font-size: 0.85rem;
+                  color: var(--forest-green);
+                  font-weight: 600;
+                "
+                >Delivered</span
+              >
+            </div>
+            <div
+              style="
+                padding: 1rem;
+                background: var(--surface-light);
+                border-radius: var(--radius);
+                margin-bottom: 1rem;
+              "
+            >
+              <p style="margin: 0; font-size: 0.9rem">
+                <strong>$12.50</strong> · +35 Eco-Points earned
+              </p>
+            </div>
+            <a class="btn btn-secondary" href="/order-detail">View Detail</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recommended -->
+      <section>
+        <h2 class="section-title">Recommended for You</h2>
+        <div class="grid cols-3">
+          <div class="product-card">
+            <div class="product-card-image">
+              <img src="/picture/buyer_ds/1.jpg" alt="Reusable Produce Bags" />
+            </div>
+            <div class="product-card-content">
+              <h3 class="product-card-name">Reusable Produce Bags</h3>
+              <p class="product-card-desc">
+                Perfect for zero-waste grocery shopping.
+              </p>
+              <p class="product-card-price">$16.99</p>
+              <a class="btn btn-primary product-card-btn" href="/product-detail"
+                >Shop Now</a
+              >
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-card-image">
+              <img src="/picture/buyer_ds/2.jpg" alt="Compost Bin Mini" />
+            </div>
+            <div class="product-card-content">
+              <h3 class="product-card-name">Compost Bin Mini</h3>
+              <p class="product-card-desc">
+                Start your home composting journey today.
+              </p>
+              <p class="product-card-price">$29.99</p>
+              <a class="btn btn-primary product-card-btn" href="/product-detail"
+                >Shop Now</a
+              >
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-card-image">
+              <img src="/picture/buyer_ds/3.jpg" alt="Eco Cleaning Kit" />
+            </div>
+            <div class="product-card-content">
+              <h3 class="product-card-name">Eco Cleaning Kit</h3>
+              <p class="product-card-desc">
+                Sustainable multi-purpose solutions.
+              </p>
+              <p class="product-card-price">$22.50</p>
+              <a class="btn btn-primary product-card-btn" href="/product-detail"
+                >Shop Now</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-root"></div>
+
+    <!-- ========== SCRIPTS - Modular Approach ========== -->
+    <!-- Auth Manager must load first -->
+    <script src="/js/auth.js"></script>
+
+    <!-- Component scripts -->
+    <script src="/js/components/navbar.js"></script>
+    <script src="/js/components/footer.js"></script>
+
+    <!-- Main app entry point -->
+    <script src="/js/main.js"></script>
+  </body>
+</html>

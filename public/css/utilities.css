@@ -1,0 +1,380 @@
+/* ============================================
+   UTILITIES.CSS - Utility Classes
+   ============================================ */
+
+/* SPACING UTILITIES */
+.m-0 {
+  margin: 0;
+}
+.m-1 {
+  margin: var(--space-sm);
+}
+.m-2 {
+  margin: var(--space-md);
+}
+.m-3 {
+  margin: var(--space-lg);
+}
+.m-4 {
+  margin: var(--space-xl);
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+.mt-1 {
+  margin-top: var(--space-sm);
+}
+.mt-2 {
+  margin-top: var(--space-md);
+}
+.mt-3 {
+  margin-top: var(--space-lg);
+}
+.mt-4 {
+  margin-top: var(--space-xl);
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+.mb-1 {
+  margin-bottom: var(--space-sm);
+}
+.mb-2 {
+  margin-bottom: var(--space-md);
+}
+.mb-3 {
+  margin-bottom: var(--space-lg);
+}
+.mb-4 {
+  margin-bottom: var(--space-xl);
+}
+
+.ml-1 {
+  margin-left: var(--space-sm);
+}
+.ml-2 {
+  margin-left: var(--space-md);
+}
+.ml-3 {
+  margin-left: var(--space-lg);
+}
+
+.mr-1 {
+  margin-right: var(--space-sm);
+}
+.mr-2 {
+  margin-right: var(--space-md);
+}
+.mr-3 {
+  margin-right: var(--space-lg);
+}
+
+.px-1 {
+  padding-left: var(--space-sm);
+  padding-right: var(--space-sm);
+}
+.px-2 {
+  padding-left: var(--space-md);
+  padding-right: var(--space-md);
+}
+.px-3 {
+  padding-left: var(--space-lg);
+  padding-right: var(--space-lg);
+}
+
+.py-1 {
+  padding-top: var(--space-sm);
+  padding-bottom: var(--space-sm);
+}
+.py-2 {
+  padding-top: var(--space-md);
+  padding-bottom: var(--space-md);
+}
+.py-3 {
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-lg);
+}
+
+.p-0 {
+  padding: 0;
+}
+.p-1 {
+  padding: var(--space-sm);
+}
+.p-2 {
+  padding: var(--space-md);
+}
+.p-3 {
+  padding: var(--space-lg);
+}
+.p-4 {
+  padding: var(--space-xl);
+}
+
+/* DISPLAY UTILITIES */
+.block {
+  display: block;
+}
+.inline-block {
+  display: inline-block;
+}
+.inline {
+  display: inline;
+}
+.flex {
+  display: flex;
+}
+.inline-flex {
+  display: inline-flex;
+}
+.grid {
+  display: grid;
+}
+
+/* FLEX UTILITIES */
+.flex-row {
+  flex-direction: row;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+.items-center {
+  align-items: center;
+}
+.items-end {
+  align-items: flex-end;
+}
+.items-stretch {
+  align-items: stretch;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-around {
+  justify-content: space-around;
+}
+
+.gap-1 {
+  gap: var(--space-sm);
+}
+.gap-2 {
+  gap: var(--space-md);
+}
+.gap-3 {
+  gap: var(--space-lg);
+}
+.gap-4 {
+  gap: var(--space-xl);
+}
+
+/* WIDTH & HEIGHT */
+.w-full {
+  width: 100%;
+}
+.w-auto {
+  width: auto;
+}
+.h-full {
+  height: 100%;
+}
+.h-auto {
+  height: auto;
+}
+
+.w-50 {
+  width: 50%;
+}
+.w-33 {
+  width: 33.333%;
+}
+.w-66 {
+  width: 66.666%;
+}
+
+/* ASPECT RATIO */
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+.aspect-auto {
+  aspect-ratio: auto;
+}
+
+/* BORDER UTILITIES */
+.border {
+  border: 1px solid var(--border);
+}
+.border-t {
+  border-top: 1px solid var(--border);
+}
+.border-b {
+  border-bottom: 1px solid var(--border);
+}
+.border-l {
+  border-left: 1px solid var(--border);
+}
+.border-r {
+  border-right: 1px solid var(--border);
+}
+
+.rounded {
+  border-radius: var(--radius);
+}
+.rounded-lg {
+  border-radius: var(--radius-lg);
+}
+.rounded-full {
+  border-radius: var(--radius-full);
+}
+
+/* SHADOW UTILITIES */
+.shadow-sm {
+  box-shadow: var(--shadow-sm);
+}
+.shadow-md {
+  box-shadow: var(--shadow-md);
+}
+.shadow-lg {
+  box-shadow: var(--shadow-lg);
+}
+.shadow-none {
+  box-shadow: none;
+}
+
+/* BACKGROUND UTILITIES */
+.bg-primary {
+  background: var(--forest-green);
+}
+.bg-white {
+  background: var(--surface);
+}
+.bg-light {
+  background: var(--surface-light);
+}
+.bg-green-light {
+  background: #e8f5ed;
+}
+
+/* OPACITY */
+.opacity-50 {
+  opacity: 0.5;
+}
+.opacity-75 {
+  opacity: 0.75;
+}
+.opacity-100 {
+  opacity: 1;
+}
+
+/* POSITION */
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.sticky {
+  position: sticky;
+}
+
+/* Z-INDEX */
+.z-0 {
+  z-index: 0;
+}
+.z-10 {
+  z-index: 10;
+}
+.z-50 {
+  z-index: 50;
+}
+
+/* OVERFLOW */
+.overflow-hidden {
+  overflow: hidden;
+}
+.overflow-auto {
+  overflow: auto;
+}
+.overflow-visible {
+  overflow: visible;
+}
+
+.text-overflow-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* CURSOR */
+.cursor-pointer {
+  cursor: pointer;
+}
+.cursor-default {
+  cursor: default;
+}
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
+
+/* TRANSITION */
+.transition {
+  transition: all var(--transition);
+}
+.transition-fast {
+  transition: all var(--transition-fast);
+}
+
+/* RESPONSIVE DISPLAY */
+@media (max-width: 768px) {
+  .hidden-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .visible-mobile {
+    display: none;
+  }
+}
+
+/* ASPECT RATIO IMAGES */
+img.aspect-video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+img.aspect-square {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}

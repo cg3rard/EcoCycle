@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoCycle | Product Detail</title>
+
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/utilities.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <style>
+      .product-image {
+        /* Mengubah dari grid ke flex karena lebih stabil untuk gambar */
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem !important; /* Memperbesar ruang kosong di sekitar tas */
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+
+      .product-image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important; /* Kunci: memaksa gambar fit ke dalam kotak */
+        mix-blend-mode: multiply;
+      }
+
+      /* Cart Toast Notification */
+      .cart-toast {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        background: var(--surface);
+        border-left: 4px solid var(--forest-green);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-lg);
+        padding: 1rem 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        z-index: 1000;
+        transform: translateX(120%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+
+      .cart-toast.show {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .cart-toast-icon {
+        width: 32px;
+        height: 32px;
+        background: #e8f5ed;
+        color: var(--forest-green);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 1.1rem;
+      }
+
+      @media (max-width: 768px) {
+        .cart-toast {
+          bottom: 1rem;
+          right: 1rem;
+          left: 1rem;
+          transform: translateY(120%);
+        }
+        .cart-toast.show {
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar-root"></div>
+
+    <link rel="icon" type="image/png" href="/ecocycle.png" />
+    <main class="container section">
+      <a href="/products" class="back-button">
+        <span>←</span> Back to Products
+      </a>
+
+      <section class="product-detail">
+        <div class="product-image">
+          <img
+            src="/picture/product_detail/prod_detail_1.jpg"
+            alt="Recycled Tote Bag Product Image"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="product-info">
+          <h1>Recycled Tote Bag</h1>
+          <p>
+            Premium durable tote bag crafted from post-consumer textile waste.
+            Perfect for everyday use while supporting the circular economy and
+            reducing landfill burden.
+          </p>
+
+          <div class="price-section">
+            <div class="price">$24.99</div>
+            <p>In Stock · Free Shipping Over $50</p>
+
+            <!-- Transaction Transparency / Price Breakdown -->
+            <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border);">
+              <h4 style="margin: 0 0 0.5rem; font-size: 1rem; color: var(--text-primary);">Price Breakdown</h4>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 0.3rem; font-size: 0.9rem;">
+                <span style="color: var(--text-secondary);">Product Price</span>
+                <span>$24.99</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 0.3rem; font-size: 0.9rem;">
+                <span style="color: var(--text-secondary);">Shipping</span>
+                <span>$5.00</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 0.3rem; font-size: 0.9rem;">
+                <span style="color: var(--text-secondary);">Admin Fee</span>
+                <span>$1.50</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.9rem;">
+                <span style="color: var(--text-secondary);">Estimated Tax</span>
+                <span>$2.00</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-weight: 600; font-size: 1.05rem; color: var(--forest-green); padding-top: 0.5rem; border-top: 1px dashed var(--border);">
+                <span>Total Estimated</span>
+                <span>$33.49</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card bg-green-light rounded-lg p-3">
+            <h3 class="text-green mb-2">Environmental Impact</h3>
+            <ul class="flex flex-col gap-1">
+              <li>✓ Prevents ~2.5kg of textile waste from landfills</li>
+              <li>✓ Reduces carbon footprint vs. virgin materials by 60%</li>
+              <li>✓ Supports local textile recycling partners</li>
+              <li>✓ Earn 50 Eco-Points with this purchase</li>
+            </ul>
+          </div>
+
+          <div
+            class="card bg-green-light rounded-lg p-3"
+            style="margin-top: 1rem"
+          >
+            <h3 class="text-green mb-2">Educational Facts</h3>
+            <ul class="flex flex-col gap-1">
+              <li>
+                Recycled tote bags help reduce plastic waste by replacing
+                single-use shopping bags.
+              </li>
+              <li>
+                Many recycled tote bags are made from reused materials such as
+                old fabric, plastic bottles, or textile waste.
+              </li>
+              <li>
+                Using a reusable tote bag regularly can significantly lower
+                environmental pollution and support sustainable living.
+              </li>
+            </ul>
+          </div>
+
+          <div class="product-actions">
+            <button class="btn btn-primary" id="addToCartBtn">
+              Add to Cart
+            </button>
+            <button class="btn btn-secondary" id="saveForLaterBtn">
+              Save for Later
+            </button>
+          </div>
+
+          <div class="cart-toast" id="cartFeedback" role="status">
+            <div class="cart-toast-icon">✓</div>
+            <div>
+              <h4
+                style="margin: 0; color: var(--text-primary); font-size: 1rem"
+              >
+                Added to cart!
+              </h4>
+              <p style="margin: 0; font-size: 0.9rem; color: var(--text-muted)">
+                Your item is ready for checkout.
+              </p>
+            </div>
+          </div>
+
+          <div class="border-t mt-4 pt-4">
+            <h3 class="mb-3">Product Details</h3>
+            <dl class="grid cols-2 gap-2 text-sm">
+              <div>
+                <dt class="font-semibold">Material:</dt>
+                <dd>80% recycled cotton, 20% recycled polyester</dd>
+              </div>
+              <div>
+                <dt class="font-semibold">Dimensions:</dt>
+                <dd>35cm × 40cm × 12cm</dd>
+              </div>
+              <div>
+                <dt class="font-semibold">Weight:</dt>
+                <dd>220 grams</dd>
+              </div>
+              <div>
+                <dt class="font-semibold">Care:</dt>
+                <dd>Machine wash cold, tumble dry low</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-8">
+        <h2 class="section-title mb-4">Customer Reviews</h2>
+        <div class="grid cols-2">
+          <div class="card">
+            <div class="flex justify-between items-start mb-2">
+              <div>
+                <h4 class="font-semibold">Great Quality!</h4>
+                <p class="text-sm text-muted">By Jessica M. · 2 months ago</p>
+              </div>
+              <span class="text-yellow">★★★★★</span>
+            </div>
+            <p class="text-secondary text-sm">
+              Very sturdy and spacious. I use it for my weekly groceries and it
+              holds up perfectly. Highly recommend!
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="flex justify-between items-start mb-2">
+              <div>
+                <h4 class="font-semibold">
+                  Perfect for eco-conscious shopping
+                </h4>
+                <p class="text-sm text-muted">By Tom R. · 3 weeks ago</p>
+              </div>
+              <span class="text-yellow">★★★★☆</span>
+            </div>
+            <p class="text-secondary text-sm">
+              Love the durability and the fact that it's made from recycled
+              materials. Minor issue with the stitching, but overall excellent.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-8">
+        <h2 class="section-title">Related Products</h2>
+        <p class="section-subtitle">You might also like</p>
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-card-image">
+              <img
+                src="/picture/product_detail/prod_detail_2.webp"
+                alt="Bamboo Cutlery Set"
+                loading="lazy"
+              />
+            </div>
+            <div class="product-card-content">
+              <h3 class="product-card-name">Bamboo Cutlery Set</h3>
+              <p class="product-card-desc">
+                Reusable cutlery to replace single-use plastic while traveling.
+              </p>
+              <p class="product-card-price">$18.99</p>
+              <a
+                href="/product-detail"
+                class="btn btn-primary product-card-btn"
+              >
+                View Product
+              </a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-card-image">
+              <img
+                src="/picture/product_detail/prod_detail_3.jpg"
+                alt="Reusable Produce Bags"
+                loading="lazy"
+              />
+            </div>
+            <div class="product-card-content">
+              <h3 class="product-card-name">Reusable Produce Bags</h3>
+              <p class="product-card-desc">
+                Organic cotton mesh bags perfect for zero-waste shopping.
+              </p>
+              <p class="product-card-price">$16.99</p>
+              <a
+                href="/product-detail"
+                class="btn btn-primary product-card-btn"
+              >
+                View Product
+              </a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-card-image">
+              <img
+                src="/picture/product_detail/prod_detail_4.webp"
+                alt="Glass Soap Dispenser"
+                loading="lazy"
+              />
+            </div>
+            <div class="product-card-content">
+              <h3 class="product-card-name">Glass Soap Dispenser</h3>
+              <p class="product-card-desc">
+                Refillable dispenser designed for long-term household use.
+              </p>
+              <p class="product-card-price">$14.99</p>
+              <a
+                href="/product-detail"
+                class="btn btn-primary product-card-btn"
+              >
+                View Product
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-root"></div>
+
+    <script src="/js/auth.js"></script>
+
+    <script src="/js/components/navbar.js"></script>
+    <script src="/js/components/footer.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const addToCartBtn = document.getElementById("addToCartBtn");
+        const saveForLaterBtn = document.getElementById("saveForLaterBtn");
+        const toastFeedback = document.getElementById("cartFeedback");
+        const toastIcon = toastFeedback.querySelector(".cart-toast-icon");
+        const toastTitle = toastFeedback.querySelector("h4");
+        const toastDesc = toastFeedback.querySelector("p");
+
+        let toastTimeout;
+
+        function showToast(type) {
+          if (type === "cart") {
+            toastIcon.textContent = "✓";
+            toastIcon.style.color = "var(--forest-green)";
+            toastIcon.style.background = "#e8f5ed";
+            toastTitle.textContent = "Added to cart!";
+            toastDesc.textContent = "Your item is ready for checkout.";
+          } else if (type === "wishlist") {
+            toastIcon.textContent = "❤️";
+            toastIcon.style.color = "#e53e3e";
+            toastIcon.style.background = "#fff5f5";
+            toastTitle.textContent = "Saved for later!";
+            toastDesc.textContent = "Product added to your wishlist.";
+          }
+
+          toastFeedback.classList.add("show");
+
+          clearTimeout(toastTimeout);
+          toastTimeout = setTimeout(() => {
+            toastFeedback.classList.remove("show");
+          }, 3000);
+        }
+
+        // Add to Cart button handler
+        if (addToCartBtn) {
+          addToCartBtn.addEventListener("click", function () {
+            showToast("cart");
+          });
+        }
+
+        // Save for Later button handler
+        if (saveForLaterBtn) {
+          saveForLaterBtn.addEventListener("click", function () {
+            showToast("wishlist");
+          });
+        }
+      });
+    </script>
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>

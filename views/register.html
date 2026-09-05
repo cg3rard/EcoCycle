@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoCycle | Create Account</title>
+    <link rel="icon" type="image/png" href="/ecocycle.png" />
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/utilities.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div id="navbar-root"></div>
+
+    <main class="container section">
+      <h1 class="section-title" style="text-align: center">
+        Create Your EcoCycle Account
+      </h1>
+      <p class="section-subtitle" style="text-align: center">
+        Join our community of conscious shoppers and eco-friendly sellers
+      </p>
+
+      <section class="form-wrapper" aria-labelledby="registerHeading">
+        <h2 id="registerHeading">Register</h2>
+
+        <form action="/register" method="POST" novalidate>
+          <div class="form-field">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Choose your username"
+              required
+              autocomplete="username"
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Create a strong password"
+              required
+              autocomplete="new-password"
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="confirmPassword">Confirm Password</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              placeholder="Re-enter your password"
+              required
+              autocomplete="new-password"
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="role">I want to be a:</label>
+            <select id="role" name="role" required>
+              <option value="">-- Select Role --</option>
+              <option value="buyer">Buyer (Shop for eco-products)</option>
+              <option value="seller">Seller (Sell your eco-products)</option>
+            </select>
+          </div>
+
+          <button
+            class="btn btn-primary"
+            type="submit"
+            style="width: 100%; min-height: 48px; margin-bottom: 16px"
+          >
+            Create Account
+          </button>
+        </form>
+
+        <p id="registerError" class="alert" role="alert" hidden></p>
+        <p
+          style="
+            text-align: center;
+            margin-top: 1.5rem;
+            color: var(--text-muted);
+          "
+        >
+          Already have an account?
+          <a href="/login" style="color: var(--forest-green); font-weight: 600"
+            >Sign In</a
+          >
+        </p>
+      </section>
+    </main>
+
+    <div id="footer-root"></div>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/components/navbar.js"></script>
+    <script src="/js/components/footer.js"></script>
+  </body>
+</html>
